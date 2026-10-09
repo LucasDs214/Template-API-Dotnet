@@ -1,0 +1,9 @@
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/GenericCrud.API
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/appsettings.Development.json
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/appsettings.json
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/GenericCrud.API.dll
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/GenericCrud.API.deps.json
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/GenericCrud.API.runtimeconfig.json
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/GenericCrud.API.pdb
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/Microsoft.AspNetCore.OpenApi.dll
+/workspaces/Template-API-Dotnet/bin/Release/net9.0/publish/Microsoft.OpenApi.dll
