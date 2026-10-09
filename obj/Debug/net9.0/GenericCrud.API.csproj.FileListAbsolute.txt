@@ -1,0 +1,9 @@
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.csproj.AssemblyReference.cache
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/rpswa.dswa.cache.json
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.AssemblyInfoInputs.cache
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.AssemblyInfo.cs
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.csproj.CoreCompileInputs.cache
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.MvcApplicationPartsAssemblyInfo.cs
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.MvcApplicationPartsAssemblyInfo.cache
+/workspaces/Template-API-Dotnet/obj/Debug/net9.0/GenericCrud.API.sourcelink.json
