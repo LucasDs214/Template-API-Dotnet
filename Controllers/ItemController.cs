@@ -1,3 +1,4 @@
+using GenericCrud.API.DTOs;
 using GenericCrud.API.Interfaces;
 using GenericCrud.API.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -22,10 +23,31 @@ public class ItemController : ControllerBase
         return Ok(itens);
     }
 
-    [HttpPost]
-    public async Task<ActionResult<Item>> Post(Item item)
+    [HttpGet("{id:int}")]
+    public async Task<ActionResult<Item>> GetById(int id)
     {
-        var novoItem = await _itemService.CriarAsync(item);
-        return Ok(novoItem);
+        var item = await _itemService.ObterPorIdAsync(id);
+        return item is null ? NotFound() : Ok(item);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<Item>> Post(ItemDto dto)
+    {
+        var novo = await _itemService.CriarAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = novo.Id }, novo);
+    }
+
+    [HttpPut("{id:int}")]
+    public async Task<ActionResult<Item>> Put(int id, ItemDto dto)
+    {
+        var item = await _itemService.AtualizarAsync(id, dto);
+        return item is null ? NotFound() : Ok(item);
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var removido = await _itemService.RemoverAsync(id);
+        return removido ? NoContent() : NotFound();
     }
 }

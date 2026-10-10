@@ -11,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // 2. Injeção de Dependência dos Serviços
 builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<ICarroService, CarroService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -25,13 +26,14 @@ using (var scope = app.Services.CreateScope())
     db.Database.EnsureCreated();
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
 
-app.UseHttpsRedirection();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "GenericCrud.API v1");
+    options.RoutePrefix = string.Empty;
+});
+
 app.UseAuthorization();
 app.MapControllers();
 
